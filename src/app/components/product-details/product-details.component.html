@@ -1,0 +1,45 @@
+<div>
+  <div *ngIf="currentProduct.id" class="edit-form">
+    <h4>Product</h4>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          required
+          [(ngModel)]="currentProduct.name"
+          name="name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="cost">Cost</label>
+        <input
+          class="form-control"
+          id="cost"
+          required
+          [(ngModel)]="currentProduct.cost"
+          name="cost"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input
+          class="form-control"
+          id="quantity"
+          required
+          [(ngModel)]="currentProduct.quantity"
+          name="quantity"
+        />
+      </div>
+      <button (click)="updateProduct()" class="btn btn-success mr-3">Submit</button>
+      <button (click)="deleteProduct()" class="btn btn-danger">Delete</button>
+
+    </div>
+
+    <div *ngIf="!currentProduct.id">
+      <h4>Cannot access this Product...</h4>
+    </div>
+  </div>
