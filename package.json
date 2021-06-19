@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others \"node server.js\" \"json-server --host 0.0.0.0 --watch db.json\"",
+    "start": "concurrently --kill-others \"node server.js\" \"json-server --host 0.0.0.0 --port 80 --watch db.json\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
